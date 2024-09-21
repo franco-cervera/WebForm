@@ -1,0 +1,138 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos del cuerpo */
+body {
+    background: linear-gradient(135deg, #99cafc, #d0cee8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; 
+}
+
+/* Contenedor principal */
+.container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Título del formulario */
+h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #2d3436;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Grupos del formulario */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #636e72;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    background-color: #f5f6fa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto focus en los campos de entrada */
+input:focus {
+    border-color: #74b9ff;
+    box-shadow: 0 0 8px rgba(116, 185, 255, 0.5);
+    outline: none;
+}
+
+/* Estilos adicionales para los campos de contraseña */
+input[type="password"] {
+    letter-spacing: 0.1em;
+}
+
+/* Botón de envío */
+button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #b2c9e0; /* Azul apagado */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: not-allowed; /* Cambiar cursor si está deshabilitado */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+
+/* Cambia de color cuando está habilitado */
+button:not(:disabled) {
+    background-color: #0984e3;
+}
+
+button:not(:disabled):hover {
+    background-color: #00b894; /* Verde */
+    transform: translateY(-3px);
+    cursor: pointer; 
+}
+
+/* Efecto de active */
+button:active {
+    transform: translateY(1px);
+}
+
+/* Checkbox */
+.form-group label {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+
+/* Diseño responsivo */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
